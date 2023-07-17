@@ -1,11 +1,11 @@
-About robotframework-databaselibrary
-====================================
+About robotframework-databaselibrary-feedstock
+==============================================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/robotframework-databaselibrary-feedstock/blob/main/LICENSE.txt)
 
 Home: https://github.com/franz-see/Robotframework-Database-Library
 
 Package license: Apache-2.0
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/robotframework-databaselibrary-feedstock/blob/main/LICENSE.txt)
 
 Summary: Database utility library for Robot Framework
 
