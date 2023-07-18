@@ -20,7 +20,8 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - robotframework >=3.0
+    - robotframework
+    - robotframework-excellib
 
 test:
   imports:
