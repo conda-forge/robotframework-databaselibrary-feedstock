@@ -1,13 +1,13 @@
 {% set name = "robotframework-databaselibrary" %}
-{% set version = "1.4.4" %}
+{% set version = "2.0.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/robotframework-databaselibrary-{{ version }}.tar.gz
-  sha256: 4e9cd4c96937420ed3bb5baee65c4320bbd7ecc73a0836895c2c1dd9c2a99acf
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: f01077434344af3a460499f9da52a23544ee02e000d5fe2fa9efa8c0fd74eee7
 
 build:
   noarch: python
