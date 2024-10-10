@@ -1,29 +1,31 @@
 {% set name = "robotframework-databaselibrary" %}
-{% set version = "1.4.4" %}
+{% set version = "2.0.3" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/robotframework-databaselibrary-{{ version }}.tar.gz
-  sha256: 4e9cd4c96937420ed3bb5baee65c4320bbd7ecc73a0836895c2c1dd9c2a99acf
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: 0867ff31df8e1db63033708d36ee09e321b4edf6626320c213eab9a6c42c0bc7
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - setuptools >=61.0
-    - robotframework
+    - robotframework >=5.0.1
+    - robotframework-assertion-engine
     - pip
   run:
-    - python >=3.7
-    - robotframework
+    - python >=3.8
+    - robotframework >=5.0.1
     - robotframework-excellib
+    - robotframework-assertion-engine
 
 test:
   imports:
