@@ -11,19 +11,21 @@ source:
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
 
 requirements:
   host:
-    - python >=3.7
+    - python >=3.8
     - setuptools >=61.0
-    - robotframework
+    - robotframework >=5.0.1
+    - robotframework-assertion-engine
     - pip
   run:
-    - python >=3.7
-    - robotframework
+    - python >=3.8
+    - robotframework >=5.0.1
     - robotframework-excellib
+    - robotframework-assertion-engine
 
 test:
   imports:
