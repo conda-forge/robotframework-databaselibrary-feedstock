@@ -6,23 +6,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
   sha256: 0ed5db7a48bd2fcb2572e435e09d5ebb97b715026e792f7dcf49af29c951fd7d
 
 build:
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: 0
+  number: 1
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - setuptools >=61.0
     - robotframework >=5.0.1
     - robotframework-assertion-engine
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
     - robotframework >=5.0.1
     - robotframework-excellib
     - robotframework-assertion-engine
@@ -34,6 +34,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/franz-see/Robotframework-Database-Library
