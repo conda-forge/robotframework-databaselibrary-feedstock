@@ -7,7 +7,7 @@ Home: https://github.com/franz-see/Robotframework-Database-Library
 
 Package license: Apache-2.0
 
-Summary: Database utility library for Robot Framework
+Summary: Database Library for Robot Framework
 
 Documentation: https://pythonhosted.org/robotframework-databaselibrary/
 
