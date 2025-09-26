@@ -20,13 +20,14 @@ requirements:
     - setuptools >=61.0
     - robotframework >=5.0.1
     - robotframework-assertion-engine
+    - sqlparse
     - pip
   run:
-    - sqlparse
     - python >={{ python_min }}
     - robotframework >=5.0.1
     - robotframework-excellib
     - robotframework-assertion-engine
+    - sqlparse
 
 test:
   imports:
