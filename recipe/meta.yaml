@@ -1,5 +1,5 @@
 {% set name = "robotframework-databaselibrary" %}
-{% set version = "2.1.6" %}
+{% set version = "2.3.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name.replace('-', '_') }}-{{ version }}.tar.gz
-  sha256: 76215afaf2bb554213fadceaf473eed3173c11032728c789d15ce13860210f5e
+  sha256: a1a81dccf477627ebff5efc399f6a2cc3b1092ad40a0b7074afa0102a39a7cf5
 
 build:
   noarch: python
@@ -22,6 +22,7 @@ requirements:
     - robotframework-assertion-engine
     - pip
   run:
+    - sqlparse
     - python >={{ python_min }}
     - robotframework >=5.0.1
     - robotframework-excellib
