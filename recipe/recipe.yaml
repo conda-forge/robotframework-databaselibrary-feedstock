@@ -3,7 +3,7 @@ schema_version: 1
 
 context:
   name: robotframework-databaselibrary
-  version: "2.3.1"
+  version: "2.3.2"
 
 package:
   name: ${{ name|lower }}
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/robotframework_databaselibrary-${{ version }}.tar.gz
-  sha256: a1a81dccf477627ebff5efc399f6a2cc3b1092ad40a0b7074afa0102a39a7cf5
+  sha256: 8686d8a3f880d6abc2ea2f71e12eb48e2382ae7fbfdbf7386a0f500313fda14d
 
 build:
   number: 0
